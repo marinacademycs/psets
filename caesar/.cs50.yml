@@ -8,7 +8,7 @@ check50:
       - run: python3 caesar.py 
         stdin: 
           - hello world
-          - 1
+          - 0
         stdout: hello world
       
 submit50:
