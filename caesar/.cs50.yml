@@ -16,6 +16,11 @@ check50:
           - helloworld
           - 2
         stdout: jgnnqyqtnf
-
+    Mix of upper and lowercase shift of 5:
+      - run: python3 caesar.py 
+        stdin: 
+          - MiXoFuPpEr
+          - 5
+        stdout: RnCtKzUuJw
 submit50:
   files: *check50_files
