@@ -34,5 +34,11 @@ check50:
           - NegativeShift
           - -5
         stdout: IzbvodqzNcdao
+    Mix of upper lower specials chars:
+      - run: python3 caesar.py 
+        stdin: 
+          - Upp3rL0. wer$p3c14l-l33t
+          - 20
+        stdout: Ojj3lF0. qyl$j3w14f-f33n
 submit50:
   files: *check50_files
