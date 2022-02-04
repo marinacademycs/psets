@@ -28,5 +28,11 @@ check50:
           - MiXoFuPpEr
           - 500
         stdout: SoDuLaVvKx
+    Mix of upper and lowercase shift of neg5:
+      - run: python3 caesar.py 
+        stdin: 
+          - NegativeShift
+          - -5
+        stdout: IzbvodqzNcdao
 submit50:
   files: *check50_files
