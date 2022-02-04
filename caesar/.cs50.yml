@@ -22,5 +22,11 @@ check50:
           - MiXoFuPpEr
           - 5
         stdout: RnCtKzUuJw
+    Mix of upper and lowercase shift of 500:
+      - run: python3 caesar.py 
+        stdin: 
+          - MiXoFuPpEr
+          - 500
+        stdout: SoDuLaVvKx
 submit50:
   files: *check50_files
