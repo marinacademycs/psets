@@ -3,7 +3,7 @@ check50:
     - !exclude "*"
     - !include "caesar.py"
 
-checks:
+  checks:
     hello world:
       - run: python3 caesar.py 
         stdin: 
