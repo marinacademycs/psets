@@ -10,7 +10,6 @@ check50:
           - helloworld
           - 0
         stdout: helloworld
-    
     hello shift 2:
       - run: python3 caesar.py 
         stdin: 
