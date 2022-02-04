@@ -4,7 +4,7 @@ check50:
     - !include "caesar.py"
 
   checks:
-    hello world no shift:
+    hello world:
       - run: python3 caesar.py 
         stdin: 
           - helloworld
