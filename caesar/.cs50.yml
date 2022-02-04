@@ -2,6 +2,14 @@ check50:
   files: &check50_files
     - !exclude "*"
     - !include "caesar.py"
-        
+  
+  checks:
+    hello world:
+      - run: python3 caesar.py
+        stdin:
+          - helloworld
+          - 0
+        stdout: helloworld
+    
 submit50:
   files: *check50_files
