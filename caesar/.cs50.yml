@@ -11,5 +11,12 @@ check50:
           - 0
         stdout: helloworld
     
+    hello shift 2:
+      - run: python3 caesar.py 
+        stdin: 
+          - helloworld
+          - 2
+        stdout: jgnnqyqtnf
+        
 submit50:
   files: *check50_files
