@@ -1,7 +1,7 @@
 check50:
   files: &check50_files
     - !exclude "*"
-    - !include "caesar.py"
+    - !include "substitution.py"
   
   checks:
     hello world:
