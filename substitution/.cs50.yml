@@ -1,4 +1,4 @@
-check50:
+check50: true
   checks:
     helloworld:
       - run: python3 substitution.py encrypt
