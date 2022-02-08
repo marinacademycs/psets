@@ -21,13 +21,17 @@ check50:
     Key too short:
       - run: python3 substitution.py encrypt
         stdin: 
+          - helloworld
           - qwertyuasdf
         stdout: Invalid key length.
+        exit: 1
     Key too long:
       - run: python3 substitution.py encrypt
         stdin: 
+          - hellowooooorld
           - qwertyuasdfqwertyuasdfqwertyuasdf
         stdout: Invalid key length.
+        exit: 1
     Duplicate letters in key:
       - run: python3 substitution.py encrypt 
         stdin: 
