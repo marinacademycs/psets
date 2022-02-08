@@ -40,7 +40,7 @@ check50:
           - HeLLoWorLD
           - qwertyuiopasdfghjklzxcvbnm
         stdout: PcSSiBidSM
-    Accepts upper and lower case, numbers, specials chars:
+    Accepts upper and lower case numbers specials chars:
       - run: python3 substitution.py encrypt
         stdin:
           - Upp3rL0. wer$p3c14l-l33t
