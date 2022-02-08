@@ -2,13 +2,12 @@ check50:
   files: &check50_files
     - !exclude "*"
     - !include "substitution.py"
-  
-checks:
-  helloworld:
-    - run: python3 substitution.py encrypt
-      stdin:
-        - helloworld
-        - qwertyuiopasdfghjklzxcvbnm
-      stdout: ciphertext: pcssibidsm
+  checks:
+    helloworld:
+      - run: python3 substitution.py encrypt
+        stdin:
+          - helloworld
+          - qwertyuiopasdfghjklzxcvbnm
+        stdout: ciphertext: pcssibidsm
 submit50:
   files: *check50_files
