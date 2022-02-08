@@ -18,6 +18,16 @@ check50:
       - run: python3 substitution.py 2 3 5
         stdout: Too many arguments.
         exit: 1
+    Mixed case Encrypt:
+      - run: python3 substitution.py enCRypt
+        stdin:
+          - helloworld
+          - qwertyuiopasdfghjklzxcvbnm
+        stdout: pcssibidsm
+    Misspelled Encryyyypt:
+      - run: python3 substitution.py encryyyypt
+        stdout: Did you enter encrypt or decrypt as the second argument?
+        exit: 1
     Key too short:
       - run: python3 substitution.py encrypt
         stdin: 
@@ -52,6 +62,13 @@ check50:
         stdout: Gjj3dS0. bcd$j3v14s-s33e
     Accepts mixedcase key:
       - run: python3 substitution.py encrypt
+        stdin:
+          - Hello123$
+          - QWERTYUIOPasdfghjklZXCVBNM
+        stdout: Pcssi123$
+    
+    Decrypt hello world:
+      - run: python3 substitution.py decrypt
         stdin:
           - Hello123$
           - QWERTYUIOPasdfghjklZXCVBNM
