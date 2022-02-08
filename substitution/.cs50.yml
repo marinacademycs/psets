@@ -9,10 +9,10 @@ check50:
         stdin:
           - helloworld
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: ciphertext: pcssibidsm
+        stdout: pcssibidsm
     No Arguments:
       - run: python3 substitution.py 
-        stdout: Usage: substitution.py encrypt/decrypt
+        stdout: Usage substitution.py encrypt/decrypt
         exit: 1
     Too many arguments:
       - run: python3 substitution.py 2 3 5
@@ -39,18 +39,18 @@ check50:
         stdin:
           - HeLLoWorLD
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: ciphertext: PcSSiBidSM
+        stdout: PcSSiBidSM
     Accepts upper and lower case, numbers, specials chars:
       - run: python3 substitution.py encrypt
         stdin:
           - Upp3rL0. wer$p3c14l-l33t
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: ciphertext: Gjj3dS0. bcd$j3v14s-s33e
+        stdout: Gjj3dS0. bcd$j3v14s-s33e
     Accepts mixedcase key:
       - run: python3 substitution.py encrypt
         stdin:
           - Hello123$
           - QWERTYUIOPasdfghjklZXCVBNM
-        stdout: ciphertext: Pcssi123$
+        stdout: Pcssi123$
 submit50:
   files: *check50_files
