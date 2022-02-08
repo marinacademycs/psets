@@ -72,5 +72,11 @@ check50:
           - Hello123$
           - QWERTYUIOPasdfghjklZXCVBNM
         stdout: Itssg123$
+    Decryp upper and lower case numbers specials chars:
+      - run: python3 substitution.py encrypt
+        stdin:
+          - Gjj3dS0. bcd$j3v14s-s33e
+          - qwertyuiopasdfghjklzxcvbnm
+        stdout: Upp3rL0. wer$p3c14l-l33t
 submit50:
   files: *check50_files
