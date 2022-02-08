@@ -66,12 +66,11 @@ check50:
           - Hello123$
           - QWERTYUIOPasdfghjklZXCVBNM
         stdout: Pcssi123$
-    
     Decrypt hello world:
       - run: python3 substitution.py decrypt
         stdin:
           - Hello123$
           - QWERTYUIOPasdfghjklZXCVBNM
-        stdout: Pcssi123$
+        stdout: Itssg123$
 submit50:
   files: *check50_files
