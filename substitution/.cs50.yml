@@ -8,6 +8,6 @@ check50:
         stdin:
           - helloworld
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: ciphertext: pcssibidsm
+        stdout: "ciphertext: pcssibidsm"
 submit50:
   files: *check50_files
