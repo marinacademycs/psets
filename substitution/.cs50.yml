@@ -7,9 +7,9 @@ check50:
     hello world:
       - run: python3 substitution.py encrypt
         stdin:
-          - helloworld
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: pcssibidsm
+          - helloworld
+        stdout: itssgvgksr
     No Arguments:
       - run: python3 substitution.py 
         stdout: Usage substitution.py encrypt/decrypt
@@ -21,9 +21,9 @@ check50:
     Mixed case Encrypt:
       - run: python3 substitution.py enCRypt
         stdin:
-          - helloworld
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: pcssibidsm
+          - helloworld
+        stdout: itssvgksr
     Misspelled Encryyyypt:
       - run: python3 substitution.py encryyyypt
         stdout: Did you enter encrypt or decrypt as the second argument?
@@ -31,52 +31,49 @@ check50:
     Key too short:
       - run: python3 substitution.py encrypt
         stdin: 
-          - helloworld
           - qwertyuasdf
         stdout: Invalid key length.
         exit: 1
     Key too long:
       - run: python3 substitution.py encrypt
         stdin: 
-          - hellowooooorld
           - qwertyuasdfqwertyuasdfqwertyuasdf
         stdout: Invalid key length.
         exit: 1
     Duplicate letters in key:
       - run: python3 substitution.py encrypt 
         stdin: 
-          - qwerty
           - qwertyuiopasdfghjklzxcvbnn
         stdout: Duplicate letters found in key.
     Accepts mixed case:
       - run: python3 substitution.py encrypt
         stdin:
-          - HeLLoWorLD
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: PcSSiBidSM
+          - HeLLoWorLD
+        stdout: ItSSgVgkSR
     Accepts upper and lower case numbers specials chars:
       - run: python3 substitution.py encrypt
         stdin:
-          - Upp3rL0. wer$p3c14l-l33t
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: Gjj3dS0. bcd$j3v14s-s33e
+          - Upp3rL0. wer$p3c14l-l33t
+        stdout: Xhh3kS0. vtk$h3e14s-s33z
     Accepts mixedcase key:
       - run: python3 substitution.py encrypt
         stdin:
-          - Hello123$
           - QWERTYUIOPasdfghjklZXCVBNM
-        stdout: Pcssi123$
-    Decrypt hello world:
+          - HelloWorld!
+        stdout: ItssgVgksr!
+    Decrypt names:
       - run: python3 substitution.py decrypt
         stdin:
-          - Hello123$
           - QWERTYUIOPasdfghjklZXCVBNM
-        stdout: Itssg123$
+          - Hqkatk! Tkoe! Doeiqts! Tziqf! Egffgk! Voss! Wkoqf!
+        stdout: Parker! Eric! Michael! Ethan! Connor! Will! Brian!
     Decrypt upper and lower case numbers specials chars:
       - run: python3 substitution.py decrypt
         stdin:
-          - Gjj3dS0. bcd$j3v14s-s33e
           - qwertyuiopasdfghjklzxcvbnm
-        stdout: Upp3rL0. wer$p3c14l-l33t
+          - Gjj3dS0. bcd$j3v14s-s33e
+        stdout: Oqq3mL0. xvm$q3w14l-l33c
 submit50:
   files: *check50_files
