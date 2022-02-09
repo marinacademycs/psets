@@ -23,7 +23,7 @@ check50:
         stdin:
           - qwertyuiopasdfghjklzxcvbnm
           - helloworld
-        stdout: itssvgksr
+        stdout: itssgvgksr
     Misspelled Encryyyypt:
       - run: python3 substitution.py encryyyypt
         stdout: Did you enter encrypt or decrypt as the second argument?
