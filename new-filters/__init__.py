@@ -18,7 +18,7 @@ def helpersh_exist():
     """%s exists.""" % filename2
     check50.exists(filename2)
 
-makefile = "MakeFile"
+makefile = "Makefile"
 @check50.check()
 def makefile_exists():
     """%s exists.""" % makefile
