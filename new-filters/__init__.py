@@ -23,12 +23,6 @@ makefile = "Makefile"
 def makefile_exists():
     """%s exists.""" % makefile
     check50.exists(makefile)    
-    
-filename3 = "filter.c"
-@check50.check()
-def filterc_exists():
-    """%s exists.""" % filename3
-    check50.exists(filename3)
 
 @check50.check(filterc_exists)
 def compiles():
