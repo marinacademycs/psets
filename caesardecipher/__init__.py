@@ -24,3 +24,15 @@ def check_1():
 
     if ex_output != program_output:
         raise check50.Mismatch(ex_output, program_output)
+        
+
+@check50.check(compiles)
+def check_2():
+    """Handles 2nd example"""
+    input = "Espcp'd l wloj hsz'd dfcp lww esle rwteepcd td rzwo / Lyo dsp'd mfjtyr l deltchlj ez Splgpy / Hspy dsp rped espcp dsp vyzhd, tq esp dezcpd lcp lww nwzdpo / Htes l hzco dsp nly rpe hsle dsp nlxp qzc / Zzs, zzs, lyo dsp'd mfjtyr l deltchlj ez Splgpy / Espcp'd l dtry zy esp hlww, mfe dsp hlyed ez mp dfcp / 'Nlfdp jzf vyzh dzxpetxpd hzcod slgp ehz xplytyrd / Ty l ecpp mj esp mczzv, espcp'd l dzyrmtco hsz dtyrd / Dzxpetxpd lww zq zfc eszfrsed lcp xtdrtgpy"
+    ex_output = "Decipher with key: 15\nplaintext: There's a lady who's sure all that glitters is gold / And she's buying a stairway to Heaven / When she gets there she knows, if the stores are all closed / With a word she can get what she came for / Ooh, ooh, and she's buying a stairway to Heaven / There's a sign on the wall, but she wants to be sure / 'Cause you know sometimes words have two meanings / In a tree by the brook, there's a songbird who sings / Sometimes all of our thoughts are misgiven\n"
+
+    program_output = check50.run("./caesar_decipher").stdin(input).stdout()
+
+    if ex_output != program_output:
+        raise check50.Mismatch(ex_output, program_output)
