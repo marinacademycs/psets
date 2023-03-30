@@ -2,5 +2,5 @@ import check50
 
 @check50.check()
 def exists():
-    """caesar.py exists."""
+    """files exists."""
     check50.exists("")
